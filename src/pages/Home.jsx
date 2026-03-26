@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ServicesSection from '../components/ServicesSection';
 import heroVilla from '../assets/images/hero-villa.jpg';
 
 function Home() {
@@ -13,7 +14,7 @@ function Home() {
         <div style={styles.content}>
           <h1 style={styles.title}>Luxury Villa Construction in Bodrum</h1>
           <p style={styles.subtitle}>
-            We build modern villas and deliver high-quality renovation services.
+            We build modern two-storey villas and deliver high-quality renovation services.
           </p>
 
           <div style={styles.buttons}>
@@ -22,6 +23,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <ServicesSection />
       <Footer />
     </>
   );
