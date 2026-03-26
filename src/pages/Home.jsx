@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ServicesSection from '../components/ServicesSection';
 import heroVilla from '../assets/images/hero-villa.jpg';
+import ProjectsSection from '../components/ProjectsSection';
 
 function Home() {
   return (
@@ -25,6 +26,7 @@ function Home() {
       </section>
 
       <ServicesSection />
+      <ProjectsSection />
       <Footer />
     </>
   );
