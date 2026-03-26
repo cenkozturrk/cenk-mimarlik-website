@@ -76,4 +76,4 @@ const styles = {
   },
 };
 
-export default ServicesSection;
+export default ServicesSections;
