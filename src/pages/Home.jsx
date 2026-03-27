@@ -5,6 +5,7 @@ import ProjectsSection from '../components/ProjectsSection';
 import AboutPreviewSection from '../components/AboutPreviewSection';
 import CtaSection from '../components/CtaSection';
 import heroVilla from '../assets/images/hero-villa.jpg';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -21,8 +22,13 @@ function Home() {
           </p>
 
           <div style={styles.buttons}>
-            <button style={styles.primaryButton}>View Projects</button>
+            <Link to="/projects" style={{ textDecoration: 'none' }}>
+              <button style={styles.primaryButton}>View Projects</button>
+            </Link>
+
+            <Link to="/contact" style={{ textDecoration: 'none' }}>
             <button style={styles.secondaryButton}>Contact</button>
+            </Link>
           </div>
         </div>
       </section>

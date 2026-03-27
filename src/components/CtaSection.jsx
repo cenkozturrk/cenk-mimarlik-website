@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function CtaSection() {
   return (
     <section style={styles.section}>
@@ -6,7 +8,9 @@ function CtaSection() {
         <p style={styles.text}>
           Contact us to discuss your villa construction or renovation project in Bodrum.
         </p>
-        <button style={styles.button}>Contact Us</button>
+        <Link to="/contact" style={{ textDecoration: 'none' }}>
+            <button style={styles.button}>Contact Us</button>
+        </Link>
       </div>
     </section>
   );

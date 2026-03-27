@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom';
+
+
 function AboutPreviewSection() {
   return (
     <section style={styles.section}>
@@ -5,11 +8,13 @@ function AboutPreviewSection() {
         <p style={styles.eyebrow}>About Cenk Mimarlık</p>
         <h2 style={styles.heading}>Modern villa construction with a Bodrum perspective</h2>
         <p style={styles.text}>
-          Cenk Mimarlik is a Bodrum-based construction company specializing in two-storey villa
+          Cenk Mimarlik is a Bodrum-based construction company specializing in villa
           construction and villa renovation. We focus on clean design, quality materials, and
           comfortable living spaces that reflect the modern Bodrum lifestyle.
         </p>
-        <button style={styles.button}>Learn More</button>
+        <Link to="/about" style={{ textDecoration: 'none' }}>
+            <button style={styles.button}>Learn More</button>
+        </Link>
       </div>
     </section>
   );
