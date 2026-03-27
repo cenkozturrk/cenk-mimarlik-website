@@ -1,8 +1,10 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ServicesSection from '../components/ServicesSection';
-import heroVilla from '../assets/images/hero-villa.jpg';
 import ProjectsSection from '../components/ProjectsSection';
+import AboutPreviewSection from '../components/AboutPreviewSection';
+import CtaSection from '../components/CtaSection';
+import heroVilla from '../assets/images/hero-villa.jpg';
 
 function Home() {
   return (
@@ -27,6 +29,8 @@ function Home() {
 
       <ServicesSection />
       <ProjectsSection />
+      <AboutPreviewSection />
+      <CtaSection />
       <Footer />
     </>
   );
