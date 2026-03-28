@@ -10,7 +10,7 @@ A modern, multi-page construction company website built using React, designed to
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - React  
 - Vite  

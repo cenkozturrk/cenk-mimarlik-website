@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ServicesSection from '../components/ServicesSection';
@@ -5,29 +6,37 @@ import ProjectsSection from '../components/ProjectsSection';
 import AboutPreviewSection from '../components/AboutPreviewSection';
 import CtaSection from '../components/CtaSection';
 import heroVilla from '../assets/images/hero-villa.jpg';
-import { Link } from 'react-router-dom';
 
 function Home() {
   return (
     <>
       <Navbar />
+
       <section style={styles.hero}>
         <img src={heroVilla} alt="Luxury villa in Bodrum" style={styles.heroImage} />
         <div style={styles.overlay}></div>
 
         <div style={styles.content}>
-          <h1 style={styles.title}>Luxury Villa Construction in Bodrum</h1>
+          <p style={styles.eyebrow}>Cenk Mimarlık · Bodrum</p>
+
+          <h1 style={styles.title}>
+            Luxury Villa
+            <br />
+            Construction in Bodrum
+          </h1>
+
           <p style={styles.subtitle}>
-            We build modern two-storey villas and deliver high-quality renovation services.
+            We build modern two-storey villas and deliver high-quality renovation
+            services with a clean architectural approach.
           </p>
 
           <div style={styles.buttons}>
-            <Link to="/projects" style={{ textDecoration: 'none' }}>
+            <Link to="/projects" style={styles.linkReset}>
               <button style={styles.primaryButton}>View Projects</button>
             </Link>
 
-            <Link to="/contact" style={{ textDecoration: 'none' }}>
-            <button style={styles.secondaryButton}>Contact</button>
+            <Link to="/contact" style={styles.linkReset}>
+              <button style={styles.secondaryButton}>Contact Us</button>
             </Link>
           </div>
         </div>
@@ -45,7 +54,7 @@ function Home() {
 const styles = {
   hero: {
     position: 'relative',
-    height: '90vh',
+    minHeight: '92vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -61,26 +70,37 @@ const styles = {
   overlay: {
     position: 'absolute',
     inset: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.28)',
+    background: 'linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.30))',
   },
   content: {
     position: 'relative',
     zIndex: 2,
     textAlign: 'center',
     color: '#ffffff',
-    padding: '0 20px',
-    maxWidth: '900px',
+    padding: '0 24px',
+    maxWidth: '860px',
+  },
+  eyebrow: {
+    fontSize: '13px',
+    letterSpacing: '2.4px',
+    textTransform: 'uppercase',
+    marginBottom: '20px',
+    color: 'rgba(255, 255, 255, 0.88)',
   },
   title: {
-    fontSize: '64px',
-    lineHeight: '1.1',
-    marginBottom: '20px',
+    fontSize: '72px',
+    lineHeight: '1.02',
+    marginBottom: '24px',
     fontWeight: '600',
+    letterSpacing: '-1.5px',
   },
   subtitle: {
-    fontSize: '22px',
-    lineHeight: '1.6',
-    marginBottom: '32px',
+    fontSize: '20px',
+    lineHeight: '1.8',
+    marginBottom: '36px',
+    color: 'rgba(255, 255, 255, 0.92)',
+    maxWidth: '720px',
+    marginInline: 'auto',
   },
   buttons: {
     display: 'flex',
@@ -88,23 +108,31 @@ const styles = {
     justifyContent: 'center',
     flexWrap: 'wrap',
   },
+  linkReset: {
+    textDecoration: 'none',
+  },
   primaryButton: {
-    padding: '14px 28px',
+    padding: '15px 30px',
     border: 'none',
     backgroundColor: '#c8a97e',
     color: '#ffffff',
-    fontSize: '16px',
+    fontSize: '15px',
+    fontWeight: '600',
+    letterSpacing: '0.3px',
     cursor: 'pointer',
-    borderRadius: '6px',
+    borderRadius: '8px',
   },
   secondaryButton: {
-    padding: '14px 28px',
-    border: '1px solid #ffffff',
-    backgroundColor: 'transparent',
+    padding: '15px 30px',
+    border: '1px solid rgba(255, 255, 255, 0.85)',
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
     color: '#ffffff',
-    fontSize: '16px',
+    fontSize: '15px',
+    fontWeight: '600',
+    letterSpacing: '0.3px',
     cursor: 'pointer',
-    borderRadius: '6px',
+    borderRadius: '8px',
+    backdropFilter: 'blur(4px)',
   },
 };
 

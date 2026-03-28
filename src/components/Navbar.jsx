@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <nav style={styles.nav}>
-      <div style={styles.logo}>Cenk Mimarlik</div>
+      <div style={styles.logo}>Cenk Mimarlık</div>
 
       <div style={styles.links}>
         <Link to="/" style={styles.link}>Home</Link>
@@ -18,26 +18,34 @@ function Navbar() {
 
 const styles = {
   nav: {
+    position: 'sticky',
+    top: 0,
+    zIndex: 1000,
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '20px 40px',
-    borderBottom: '1px solid #e5e5e5',
-    backgroundColor: '#ffffff',
+    padding: '22px 48px',
+    backgroundColor: 'rgba(255, 255, 255, 0.92)',
+    backdropFilter: 'blur(8px)',
+    borderBottom: '1px solid rgba(0, 0, 0, 0.06)',
   },
   logo: {
-    fontSize: '24px',
-    fontWeight: 'bold',
+    fontSize: '26px',
+    fontWeight: '600',
+    letterSpacing: '0.5px',
     color: '#111111',
   },
   links: {
     display: 'flex',
-    gap: '24px',
+    gap: '28px',
+    alignItems: 'center',
   },
   link: {
     textDecoration: 'none',
-    color: '#111111',
-    fontSize: '16px',
+    color: '#222222',
+    fontSize: '15px',
+    fontWeight: '500',
+    letterSpacing: '0.3px',
   },
 };
 
